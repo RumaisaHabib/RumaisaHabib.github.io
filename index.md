@@ -1,4 +1,4 @@
-## Welcome!
+## Welcome! 🐸💻
 
 My name is Rumaisa and I am a computer scientist, researcher, painter, student, and frog enthusiast. My research interests lie in the domain of network improvements, Internet measurements, and building network systems and architectures.
 
