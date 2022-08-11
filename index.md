@@ -1,37 +1,13 @@
 ## Welcome!
 
-You can use the [editor on GitHub](https://github.com/RumaisaHabib/RumaisaHabib.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+My name is Rumaisa and I am a computer scientist, researcher, painter, student, and frog enthusiast. My research interests lie in the domain of network improvements, Internet measurements, and building network systems and architectures.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Currently, I am an undergraduate student at the Lahore University of Management Sciences (LUMS) working under the supervision of [Dr. Ihsan Ayyub Qazi](https://web.lums.edu.pk/~ihsan/), [Dr. Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/) and [Dr. Zartash Afzal Uzmi] (https://lums.edu.pk/lums_employee/713). We are working on changing the Internet design to make it more affordable. 
 
-### Markdown
+### Publications
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Rethinking Web for Affordability and Inclusion [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3484266.3487376)
+HotNets '21
+(Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, **Rumaisa Habib**)
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RumaisaHabib/RumaisaHabib.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Projects
