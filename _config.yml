@@ -1,8 +1,7 @@
 theme: jekyll-theme-dinky
-title: Rumaisa Habib
 sidebar:
-  - text: |
-      Below is an image from Placeholder.com.
-
-      [![Test image from Placeholder](https://via.placeholder.com/100)](https://placeholder.com/)
-description: Contact me at 23100061 (at) lums.edu.pk
+  - title: "Rumaisa Habib"
+    image: "/assets/me.jpeg"
+    image_alt: "Rumaisa Habib"
+    description: Contact me at 23100061 (at) lums.edu.pk
+    text: "Some text here."
