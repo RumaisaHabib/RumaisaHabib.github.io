@@ -1,8 +1,8 @@
 ## Welcome! 🐸💻
 
-My name is Rumaisa and I am a computer scientist, researcher, painter, student, and frog enthusiast. My research interests lie in the domain of network improvements (security, availability and performance) and Internet measurements. I also enjoy building large scale systems.
+My name is Rumaisa and I am a computer scientist, researcher, painter, student, and frog enthusiast. My research interests lie in the domain of network improvements, Internet measurements, and building network systems and architectures.
 
-Currently, I am an undergraduate student at the Lahore University of Management Sciences (LUMS) working under the supervision of [Dr. Ihsan Ayyub Qazi](https://web.lums.edu.pk/~ihsan/), [Dr. Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/) and [Dr. Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713). Our work focuses on network improvements and measurements. Particularly, we are working on making the Internet more equitable.
+Currently, I am an undergraduate student at the Lahore University of Management Sciences (LUMS) working under the supervision of [Dr. Ihsan Ayyub Qazi](https://web.lums.edu.pk/~ihsan/), [Dr. Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/) and [Dr. Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713). Our work focusses on network improvements and measurements.
 
 ### Publications
 
@@ -13,4 +13,4 @@ Currently, I am an undergraduate student at the Lahore University of Management 
 
 - Students as Co-Researchers Grant (2022)
 - Dean's Honor List (2019-2022)
-- Merit Scholarship (2020-2023)
+- Merit Scholarship (2020-2022)

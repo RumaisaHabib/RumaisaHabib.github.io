@@ -1,6 +1,3 @@
-sidebar:
-  - title: "Rumaisa Habib"
-    image: "/assets/me.jpeg"
-    image_alt: "Rumaisa Habib"
-    description: Contact me at 23100061 (at) lums.edu.pk
-    text: "Some text here."
+theme: jekyll-theme-dinky
+title: Rumaisa Habib
+description: Contact me at 23100061 (at) lums.edu.pk
