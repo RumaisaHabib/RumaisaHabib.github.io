@@ -6,7 +6,7 @@ Currently, I am an undergraduate student at the Lahore University of Management 
 
 ### Publications
 
-- [HotNets '21] Rethinking Web for Affordability and Inclusion (Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, **Rumaisa Habib**) [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3484266.3487376)
+- [HotNets '21] Rethinking Web for Affordability and Inclusion (Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, **Rumaisa Habib**) [[Paper]]({{ site.url }}/assets/rethinking-web-affordability-inclusion.pdf)
 
 
 ### Awards
