@@ -4,9 +4,9 @@ plugins:
 remote_theme: ngzhio/jekyll-theme-hamilton
 title: Rumaisa Habib
 description: Contact me at 23100061 (at) lums.edu.pk
-avatar: /assets/me.jpeg
+avatar: /assets/me.png
 subscribe: false
-email: 23100061@lums.edu.pk
+email: 23100061(at)lums.edu.pk
 skin: midnight
 social:
   name: Rumaisa Habib
