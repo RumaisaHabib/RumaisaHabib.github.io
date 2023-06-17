@@ -16,16 +16,16 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 
 ### Awards
 
-- [Stanford Graduate Fellowship in Science & Engineering](https://vpge.stanford.edu/fellowships-funding/sgf) (2023)
+- [Stanford Graduate Fellowship in Science & Engineering](https://vpge.stanford.edu/fellowships-funding/sgf){:target="_blank"} (2023)
 - Students as Co-Researchers Grant (2022)
 - Dean's Honor List (2019-2022)
 - Merit Scholarship (2020-2023)
 
 ### Misc
 
-- [My favorite frog](https://en.wikipedia.org/wiki/Tomato_frog){:target="_blank"}
-- [A paper I really enjoyed reading](https://raft.github.io/raft.pdf){:target="_blank"}
-- [My favorite song](https://www.youtube.com/watch?v=Gs069dndIYk&ab_channel=EarthWindandFireVEVO){:target="_blank"}
+- My favorite [frog](https://en.wikipedia.org/wiki/Tomato_frog){:target="_blank"}
+- A [paper](https://raft.github.io/raft.pdf){:target="_blank"} I really enjoyed reading
+- My favorite [song](https://www.youtube.com/watch?v=Gs069dndIYk&ab_channel=EarthWindandFireVEVO){:target="_blank"}
 - My friend, [Haider Naveed](https://www.instagram.com/foolfloof/){:target="_blank"}, is a brilliant artist. Here is some artwork he made of me:
 ![Popsicle](/assets/art/popsicle.JPG) ![Zain](/assets/art/zain.JPG) ![Birth](/assets/art/birth.jpeg) ![Sailor Rumi](/assets/art/sailor.jpg)
 
