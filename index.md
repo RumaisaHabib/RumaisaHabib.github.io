@@ -27,5 +27,5 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 - [A paper I really enjoyed reading](https://raft.github.io/raft.pdf){:target="_blank"}
 - [My favorite song](https://www.youtube.com/watch?v=Gs069dndIYk&ab_channel=EarthWindandFireVEVO){:target="_blank"}
 - My friend, [Haider Naveed](https://www.instagram.com/foolfloof/){:target="_blank"}, is a brilliant artist. Here is some artwork he made of me:
-![Popsicle](/assets/art/popsicle.jpg) ![Zain](/assets/art/zain.jpg) ![Birth](/assets/art/birth.jpg) ![Sailor Rumi](/assets/art/sailor.jpg)
+![Popsicle](/assets/art/popsicle.JPG) ![Zain](/assets/art/zain.JPG) ![Birth](/assets/art/birth.jpeg) ![Sailor Rumi](/assets/art/sailor.jpg)
 
