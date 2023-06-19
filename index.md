@@ -8,7 +8,7 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 
 ### Publications
 
-- *Upcoming:*{: style="color: red;"} **[SIGCOMM '23]**{: style="color: lime;" } A Framework for Improving Web Affordability and Inclusion (***Rumaisa Habib***{: style="color: yellow;"}\*, Sarah Tanveer\*, Aimen Inam, Haseeb Ahmed, Ayesha Ali, Zartash Afzal Uzmi, Zafar Ayyub Qazi, Ihsan Ayyub Qazi) *[\*Joint first authors]*{: style="color: grey;" }
+- *Upcoming:*{: style="color: red;"} **[SIGCOMM '23]**{: style="color: lime;" } A Framework for Improving Web Affordability and Inclusiveness (***Rumaisa Habib***{: style="color: yellow;"}\*, Sarah Tanveer\*, Aimen Inam, Haseeb Ahmed, Ayesha Ali, Zartash Afzal Uzmi, Zafar Ayyub Qazi, Ihsan Ayyub Qazi) *[\*Joint first authors]*{: style="color: grey;" }
 - **[TheWebConf '23]**{: style="color: lime;" } A First Look at Public Service Websites from the Affordability Lens (***Rumaisa Habib***{: style="color: yellow;"}, Aimen Inam, Ayesha Ali, Ihsan Ayyub Qazi, Zafar Ayyub Qazi) [[Paper]]({{ site.url }}/assets/papers/public-sites.pdf) [[Dataset]](https://github.com/nsgLUMS/public-service-sites){:target="_blank"} [[Video summary]](https://youtu.be/Ni3GvG51mHo){:target="_blank"}
 - **[HotNets '21]**{: style="color: lime;" } Rethinking Web for Affordability and Inclusion (Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, ***Rumaisa Habib***{: style="color: yellow;"}) [[Paper]]({{ site.url }}/assets/papers/rethinking-web-affordability-inclusion.pdf){:target="_blank"} [[Presentation]](https://www.youtube.com/watch?v=5Vw9jF2tgVE&ab_channel=Hotnets2021){:target="_blank"}
 
@@ -22,6 +22,14 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 - Students as Co-Researchers Grant (2022)
 - Dean's Honor List (2019-2022)
 - Merit Scholarship (2020-2023)
+
+### Teaching
+
+- Undergraduate Teaching Assistant, LUMS
+	* CS678/EE678: Topics in Internet Research (Spring 2023) 
+	* CS334/EE334: Principles and Techniques of Data Science (Fall 2022)
+	* CS3812: Introduction to Blockchain: Technology and Applications (Spring 2022)
+	* CS471/EE471/CS573: Computer Networks: Principles & Practices (Fall 2021) 
 
 ### Misc
 
