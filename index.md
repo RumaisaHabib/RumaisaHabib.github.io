@@ -19,6 +19,7 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 ### Awards
 
 - [Stanford Graduate Fellowship in Science & Engineering](https://vpge.stanford.edu/fellowships-funding/sgf){:target="_blank"} (2023)
+- Graduated undergrad with an Award of High Distinction (2023)
 - Students as Co-Researchers Grant (2022)
 - Dean's Honor List (2019-2022)
 - Merit Scholarship (2020-2023)
