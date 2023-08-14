@@ -1,4 +1,4 @@
-## Welcome! 🐸💻
+## Welcome! 💻
 
 *Pause you who read this, and think for a moment of the long chain of iron or gold, of thorns or flowers, that would never have bound you, but for the formation of the first link on one memorable day. - Great Expectations (72)*
 
