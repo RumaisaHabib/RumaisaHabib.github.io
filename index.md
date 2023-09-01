@@ -8,13 +8,13 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 
 ### Publications
 
-- **[SIGCOMM '23]**{: style="color: lime;" } A Framework for Improving Web Affordability and Inclusiveness (***Rumaisa Habib***{: style="color: yellow;"}\*, Sarah Tanveer\*, Aimen Inam, Haseeb Ahmed, Ayesha Ali, Zartash Afzal Uzmi, Zafar Ayyub Qazi, Ihsan Ayyub Qazi) *[\*Joint first authors]*{: style="color: grey;" } [[Paper]]({{ site.url }}/assets/papers/framework-for-improving-affordability.pdf) [[Dataset]](https://github.com/nsgLUMS/sigcomm2023-aw4a)
-- **[TheWebConf '23]**{: style="color: lime;" } A First Look at Public Service Websites from the Affordability Lens (***Rumaisa Habib***{: style="color: yellow;"}, Aimen Inam, Ayesha Ali, Ihsan Ayyub Qazi, Zafar Ayyub Qazi) [[Paper]]({{ site.url }}/assets/papers/public-sites.pdf) [[Dataset]](https://github.com/nsgLUMS/public-service-sites){:target="_blank"} [[Video summary]](https://youtu.be/Ni3GvG51mHo){:target="_blank"}
+- **[SIGCOMM '23]**{: style="color: lime;" } A Framework for Improving Web Affordability and Inclusiveness (***Rumaisa Habib***{: style="color: yellow;"}\*, Sarah Tanveer\*, Aimen Inam, Haseeb Ahmed, Ayesha Ali, Zartash Afzal Uzmi, Zafar Ayyub Qazi, Ihsan Ayyub Qazi) *[\*Joint first authors]*{: style="color: grey;" } [[Paper]]({{ site.url }}/assets/papers/framework-for-improving-affordability.pdf){:target="_blank"} [[Dataset]](https://github.com/nsgLUMS/sigcomm2023-aw4a){:target="_blank"}
+- **[TheWebConf '23]**{: style="color: lime;" } A First Look at Public Service Websites from the Affordability Lens (***Rumaisa Habib***{: style="color: yellow;"}, Aimen Inam, Ayesha Ali, Ihsan Ayyub Qazi, Zafar Ayyub Qazi) [[Paper]]({{ site.url }}/assets/papers/public-sites.pdf){:target="_blank"} [[Dataset]](https://github.com/nsgLUMS/public-service-sites){:target="_blank"} [[Video summary]](https://youtu.be/Ni3GvG51mHo){:target="_blank"}
 - **[HotNets '21]**{: style="color: lime;" } Rethinking Web for Affordability and Inclusion (Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, ***Rumaisa Habib***{: style="color: yellow;"}) [[Paper]]({{ site.url }}/assets/papers/rethinking-web-affordability-inclusion.pdf){:target="_blank"} [[Presentation]](https://www.youtube.com/watch?v=5Vw9jF2tgVE&ab_channel=Hotnets2021){:target="_blank"}
 
 ### Talks
 
-- A First Look at Public Service Websites from the Affordability Lens (TheWebConf '23, May 2023, UT Austin, TX, USA)
+- A First Look at Public Service Websites from the Affordability Lens (TheWebConf '23, May 2023, UT Austin, TX, USA) [[Slides]](https://docs.google.com/presentation/d/1hHj3lctd1-yH5C1G7un9Rzs384ZeIoquU1VBh1M5LsQ/edit?usp=sharing){:target="_blank"}
 
 ### Awards
 
