@@ -14,6 +14,7 @@ At LUMS, I worked under the supervision of [Dr. Ihsan Ayyub Qazi](https://www.ih
 
 ### Talks
 
+- A Framework for Improving Web Affordability and Inclusiveness (SIGCOMM '23, September 2023, Columbia University, NY, USA) [[Slides]](https://docs.google.com/presentation/d/1bvluC01kf0dV1qp2LeISWC2dJYlnNC8N_vcUoGn7tg4/edit?usp=sharing){:target="_blank"}
 - A First Look at Public Service Websites from the Affordability Lens (TheWebConf '23, May 2023, UT Austin, TX, USA) [[Slides]](https://docs.google.com/presentation/d/1hHj3lctd1-yH5C1G7un9Rzs384ZeIoquU1VBh1M5LsQ/edit?usp=sharing){:target="_blank"}
 
 ### Awards
