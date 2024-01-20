@@ -15,8 +15,12 @@ At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanq
 
 ### Talks
 
-- A Framework for Improving Web Affordability and Inclusiveness (SIGCOMM '23, September 2023, Columbia University, NY, USA) [[Slides]](https://docs.google.com/presentation/d/1bvluC01kf0dV1qp2LeISWC2dJYlnNC8N_vcUoGn7tg4/edit?usp=sharing){:target="_blank"}
-- A First Look at Public Service Websites from the Affordability Lens (TheWebConf '23, May 2023, UT Austin, TX, USA) [[Slides]](https://docs.google.com/presentation/d/1hHj3lctd1-yH5C1G7un9Rzs384ZeIoquU1VBh1M5LsQ/edit?usp=sharing){:target="_blank"}
+- A Framework for Improving Web Affordability and Inclusiveness
+	* SIGCOMM '23, September 2023, Columbia University, NY, USA [[Slides]](https://docs.google.com/presentation/d/1bvluC01kf0dV1qp2LeISWC2dJYlnNC8N_vcUoGn7tg4/edit?usp=sharing){:target="_blank"}
+	* UW CHANGE Seminar, November 2023, Virtual, University of Washington, USA [[Slides]](https://docs.google.com/presentation/d/1q0X5-t7U4DcXawmSx_rksRVSzVPreW1PW9579QS27JA/edit?usp=sharing)
+	* IAB BIAS Workshop, January 2024, Virtual [[Slides]](https://docs.google.com/presentation/d/11Xhj_3OX-tTCApCwy5eezD6mrrJXz0mCFiIg8zRUn8M/edit?usp=sharing)
+- A First Look at Public Service Websites from the Affordability Lens 
+	* TheWebConf '23, May 2023, UT Austin, TX, USA [[Slides]](https://docs.google.com/presentation/d/1hHj3lctd1-yH5C1G7un9Rzs384ZeIoquU1VBh1M5LsQ/edit?usp=sharing){:target="_blank"}
 
 ### Awards
 
