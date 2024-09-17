@@ -2,9 +2,9 @@
 
 *Pause you who read this, and think for a moment of the long chain of iron or gold, of thorns or flowers, that would never have bound you, but for the formation of the first link on one memorable day. - Great Expectations (72)*
 
-I am a computer scientist, researcher, student, and frog enthusiast. Simultaneously, I am a first-year CS **PhD student** at **Stanford University**{: style="color: yellow;"} advised by [Zakir Durumeric](https://zakird.com/){:target="_blank"} and funded by the Stanford Graduate Fellowship. Before joining Stanford, I was at **LUMS**{: style="color: yellow;"} (BS '23). My research mainly focuses on Internet measurements, societal web, and privacy/security. More simply, I try to answer *how do I make things both simple and strong?* and *what do I need to build to do that?*.
+I am a computer scientist, researcher, student, and frog enthusiast. Simultaneously, I am a second-year CS **PhD student** at **Stanford University**{: style="color: yellow;"} advised by [Zakir Durumeric](https://zakird.com/){:target="_blank"} and funded by the Stanford Graduate Fellowship. Before joining Stanford, I was at **LUMS**{: style="color: yellow;"} (BS '23). My research mainly focuses on Internet measurements, censorship, and privacy/security. I am currently interested in examining how much of the web is encrypted, and the censorship circumvention.
 
-At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanqazi.com/){:target="_blank"}, [Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/){:target="_blank"} and [Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713){:target="_blank"} on three main projects. *(1)*{: style="color: yellow;"} We have a body of work on making the Internet more affordable through technical and policy solutions. We provide large scale measurement studies to bring the problem to light and design a framework that solves an optimization problem to reduce webpage complexity whilst maintaining quality. I have  also worked on *(2)*{: style="color: yellow;"} improving the anonymity of Hidden Services on Tor using Trusted Execution Environments and *(3)*{: style="color: yellow;"} efficient program debloating to reduce the attack surface of popular tools.
+At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanqazi.com/){:target="_blank"}, [Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/){:target="_blank"} and [Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713){:target="_blank"} on efficient means to debloat websites & software.
 
 ### Publications
 
@@ -43,6 +43,5 @@ At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanq
 - My favorite [frog](https://en.wikipedia.org/wiki/Tomato_frog){:target="_blank"}
 - A [paper](https://raft.github.io/raft.pdf){:target="_blank"} I really enjoyed reading
 - My favorite [song](https://www.youtube.com/watch?v=Gs069dndIYk&ab_channel=EarthWindandFireVEVO){:target="_blank"}
-- My friend, [Haider Naveed](https://www.instagram.com/foolfloof/){:target="_blank"}, is a brilliant artist. Here is some artwork he made of me:
-![Popsicle](/assets/art/popsicle.JPG) ![Zain](/assets/art/zain.JPG) ![Birth](/assets/art/birth.jpeg) ![Sailor Rumi](/assets/art/sailor.jpg)
+- My friend, [Haider Naveed](https://www.instagram.com/topitoons/){:target="_blank"}, is a brilliant artist. 
 
