@@ -14,7 +14,7 @@ At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanq
 - **[HotNets '21]**{: style="color: yellow;" } [Rethinking Web for Affordability and Inclusion]({{ site.url }}/assets/papers/rethinking-web-affordability-inclusion.pdf){:target="_blank"} (Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, __*Rumaisa Habib*__) [[Pre-recorded video]](https://www.youtube.com/watch?v=5Vw9jF2tgVE&ab_channel=Hotnets2021){:target="_blank"}
 
 ### Preprints
-- [On the Centralization and Regionalization of the Web](https://arxiv.org/pdf/2406.19569){:target="_blank"} (Gautam Akiwate, Kimberly Ruth, __*Rumaisa Habib*__, and Zakir Durumeric) [[Code]]
+- [On the Centralization and Regionalization of the Web](https://arxiv.org/pdf/2406.19569){:target="_blank"} (Gautam Akiwate, Kimberly Ruth, __*Rumaisa Habib*__, and Zakir Durumeric)
 
 ### Talks
 
