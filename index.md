@@ -2,7 +2,7 @@
 
 *Pause you who read this, and think for a moment of the long chain of iron or gold, of thorns or flowers, that would never have bound you, but for the formation of the first link on one memorable day. - Great Expectations (72)*
 
-I am a computer scientist, researcher, student, and frog enthusiast. Simultaneously, I am a second-year CS **PhD student** at **Stanford University**{: style="color: yellow;"} advised by [Zakir Durumeric](https://zakird.com/){:target="_blank"} and funded by the Stanford Graduate Fellowship. Before joining Stanford, I was at **LUMS**{: style="color: yellow;"} (BS '23). My research mainly focuses on Internet measurements, censorship, and privacy/security. I am currently interested in how much of the internet is encrypted, and censorship circumvention.
+I am a computer scientist, researcher, student, and frog enthusiast. Simultaneously, I am a second-year CS **PhD student** at **Stanford University**{: style="color: yellow;"} advised by [Zakir Durumeric](https://zakird.com/){:target="_blank"} and funded by the Stanford Graduate Fellowship. Before joining Stanford, I was at **LUMS**{: style="color: yellow;"} (BS '23). My research focuses broadly on understanding the web ecosystem and building systems to enable us to answer complex questions about it. I am also interested in how access to the Internet differs across the world.
 
 At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanqazi.com/){:target="_blank"}, [Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/){:target="_blank"} and [Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713){:target="_blank"} on efficient means to debloat websites & software.
 
