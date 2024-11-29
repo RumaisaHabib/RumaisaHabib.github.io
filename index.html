@@ -61,7 +61,7 @@
       </section>
       <section class="section">
          <div class="container">
-            <a class="title has-text-link is-4" href="#publications"># Select Publications</a>
+            <a class="title has-text-link is-4" id="publications" href="#publications"># Select Publications</a>
             <!-- Begin row -->
             <div class='space columns is-multiline'>
                     <!-- Begin card -->
@@ -124,7 +124,7 @@
                     <div class="card-content">
                         <p class="content is-italic"><span class="has-text-weight-semibold"><em>Rumaisa Habib</em></span>, Aimen Inam, Ayesha Ali, Ihsan Ayyub Qazi, Zafar Ayyub Qazi</p>
                         <div class="content is-small">
-                            This paper presents the first large-scale analysis of the afordability of public service websites in developing countries
+                            This paper presents the first large-scale analysis of the afordability of public service websites in developing countries.
                         </div>
                         <p class="content">The Web Conference 2023</p>
                     </div>
@@ -145,7 +145,7 @@
 
       <section class="section">
         <div class="container">
-            <a class="title has-text-link is-4" href="#talks"># Talks</a>
+            <a class="title has-text-link is-4" id="talks" href="#talks"># Talks</a>
             <ul class="space content">
                 <li>
                     A Framework for Improving Web Affordability and Inclusiveness
@@ -178,7 +178,7 @@
       </section>
       <section class="section">
         <div class="container">
-            <a class="title has-text-link is-4" href="#teaching"># Teaching</a>
+            <a class="title has-text-link is-4" id="teaching" href="#teaching"># Teaching</a>
             <ul class="space content">
                 <li>
                     Undergraduate Teaching Assistant, LUMS
@@ -194,7 +194,7 @@
     </section>
       <section class="section">
         <div class="container">
-            <a class="title has-text-link is-4" href="#awards"># Awards</a>
+            <a class="title has-text-link is-4" id="awards" href="#awards"># Awards</a>
             <ul class="space content">
                 <li>
                     <a href="https://vpge.stanford.edu/fellowships-funding/sgf" target="_blank" class="has-text-link line-link">Stanford Graduate Fellowship in Science &amp; Engineering</a> (2023)
@@ -219,15 +219,21 @@
     
    </body>
    <script>
-    // use saved preference
     document.addEventListener("DOMContentLoaded", () => {
       const savedTheme = localStorage.getItem("theme");
+  
       if (savedTheme) {
+        // apply saved preference if it exists
         document.documentElement.setAttribute("data-theme", savedTheme);
+      } else {
+        // use system preference
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const systemTheme = prefersDarkScheme ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", systemTheme);
       }
     });
   
-    // toggle between dark and light mode and save choice
+    // toggle between dark and light mode and save th choice
     const themeToggleButton = document.getElementById("theme-toggle");
     themeToggleButton.addEventListener("click", () => {
       const html = document.documentElement;
@@ -239,5 +245,6 @@
       localStorage.setItem("theme", newTheme);
     });
   </script>
+  
   
 </html>

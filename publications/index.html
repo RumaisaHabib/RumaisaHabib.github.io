@@ -81,15 +81,21 @@
       </section>
 
       <script>
-         // use saved preference
          document.addEventListener("DOMContentLoaded", () => {
            const savedTheme = localStorage.getItem("theme");
+       
            if (savedTheme) {
+             // apply saved preference if it exists
              document.documentElement.setAttribute("data-theme", savedTheme);
+           } else {
+             // use system preference
+             const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+             const systemTheme = prefersDarkScheme ? "dark" : "light";
+             document.documentElement.setAttribute("data-theme", systemTheme);
            }
          });
        
-         // toggle between dark and light mode and save choice
+         // toggle between dark and light mode and save th choice
          const themeToggleButton = document.getElementById("theme-toggle");
          themeToggleButton.addEventListener("click", () => {
            const html = document.documentElement;
