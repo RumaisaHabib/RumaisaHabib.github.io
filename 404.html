@@ -1,0 +1,46 @@
+<!doctype html>
+<html data-theme="light">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Rumi</title>
+      <link rel="stylesheet" href="/main.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         /* Center the icons in publications */
+         .icon-link {
+         display: flex;
+         justify-content: center;
+         align-items: center; 
+         }
+
+      </style>
+   </head>
+   <body>
+      <nav class="navbar is-centered">
+         <div class="container">
+            <div class="navbar-brand">
+               <a href="/" class="navbar-item">Home</a>
+               <a href="publications" class="navbar-item">Publications</a>
+               <a class="navbar-item">Maza</a>
+               <button>
+               <span class="material-icons navbar-item theme-icon" id="theme-toggle">wb_sunny</span>
+               </button>
+            </div>
+         </div>
+      </nav>
+
+      tbd
+   </body>
+   <script>
+      // toggle between dark and light mode
+      const themeToggleButton = document.getElementById("theme-toggle");
+      themeToggleButton.addEventListener("click", () => {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+      });
+   </script>
+</html>

@@ -1,0 +1,82 @@
+// Set your brand colors
+$red: #db6d6d;
+$green: #2b954e;
+$bright-green: #07c23f;
+$yellow: #c3b303;
+$soft-pink: #a6808c;
+$beige-light: #ccb7ae;
+$beige-lighter: #d6cfcb;
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+  $family-primary: '"Nunito", sans-serif',
+  $grey-dark: $soft-pink,
+  $grey-light: $beige-light,
+  $primary: $green,
+  $info: $bright-green,
+  $link: $green,
+  $control-border-width: 5px,
+  $input-shadow: none
+);
+
+@media only screen and (min-device-width : 480px) {
+            .big-screen {
+                padding-left: 15%;
+                padding-right: 15%;
+
+            }
+            }
+
+
+
+/* Reduce spacing between sections */
+            
+.section {
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
+}
+/* Underline when hovered */
+.line-link {
+  &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+      border-color: transparent;
+  }
+}
+.navbar {
+  padding-left: 1em;
+  padding-right: 1em
+}
+
+
+/* Ensure card footer items stay within the card */
+
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.equal-height .card-content {
+  flex: auto;
+}
+
+/* give columns more padding */
+
+.space {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+/* vertically align material icons */
+.material-icons {
+  vertical-align: middle;
+}
+
+/* for lil notes -- make them slightly transparent*/
+.small-note {
+  opacity: 0.6;
+}
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");

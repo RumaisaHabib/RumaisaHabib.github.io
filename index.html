@@ -1,0 +1,231 @@
+<!doctype html>
+<html data-theme="light">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Rumi</title>
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="stylesheet" href="/main.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         /* Center the icons in publications */
+         .icon-link {
+         display: flex;
+         justify-content: center;
+         align-items: center; 
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar is-centered">
+         <div class="container">
+            <div class="navbar-brand">
+               <a href="/" class="navbar-item">Home</a>
+               <a href="publications" class="navbar-item">Publications</a>
+               <!-- <a class="navbar-item">Maza</a> -->
+               <button>
+               <span class="material-icons navbar-item theme-icon" id="theme-toggle">wb_sunny</span>
+               </button>
+            </div>
+         </div>
+      </nav>
+      <section class="section big-screen">
+         <div class="container">
+            <div class="media is-align-items-center">
+               <figure class="media-left">
+                  <p class="image is-128x128">
+                     <img class="is-rounded" src="assets/me/me.png" />
+                  </p>
+               </figure>
+               <div class="media-content">
+                  <h1 class="title has-text-primary is-3">Rumaisa Habib/رومیسہ حبیب</h1>
+                  <p class="subtitle">
+                     frog enthusiast, scientist, PhD student <span class="content is-small">(in that order)</span>
+                  </p>
+                  <p class="content is-small">rumaisa {at} cs {dot} stanford {dot} edu | <a href="/assets/habib.pdf" target="_blank" class="has-text-weight-semibold line-link has-text-link">cv</a></p>
+                  
+               </div>
+            </div>
+            <p class="content"> I am a second-year CS PhD student at <span class="has-text-weight-semibold">Stanford
+               University</span> advised by <a href="https://zakird.com/" target="_blank" class="has-text-weight-semibold line-link has-text-link">Zakir
+               Durumeric</a> and funded by the Stanford Graduate Fellowship. Before joining Stanford, I was at <span class=" has-text-weight-semibold">LUMS</span> (BS ‘23). My research focuses broadly on understanding the web and building systems
+               to enable us to answer complex questions about it. I am also interested in how access to the Internet differs across the world.
+            </p>
+            <p class="content is-small">At LUMS, I worked under the supervision of <a href="https://www.ihsanqazi.com/" target="_blank" class="has-text-weight-semibold line-link has-text-link">Ihsan
+               Ayyub Qazi</a>, <a href="https://web.lums.edu.pk/~zafar/" target="_blank" class="has-text-weight-semibold line-link has-text-link">Zafar
+               Ayyub Qazi</a> and <a href="https://lums.edu.pk/lums_employee/713" target="_blank" class="has-text-weight-semibold line-link has-text-link">Zartash
+               Afzal Uzmi</a> on efficient means to debloat websites &amp; software.
+            </p>
+         </div>
+      </section>
+      <section class="section">
+         <div class="container">
+            <a class="title has-text-link is-4" href="#publications"># Select Publications</a>
+            <!-- Begin row -->
+            <div class='space columns is-multiline'>
+                    <!-- Begin card -->
+                    <div class='column is-one-third'>
+                        <div class='card equal-height'>
+                        <header class="card-header has-background-primary" style="opacity:70%">
+                            <p class="card-header-title has-text-white">BLADE: Towards Scalable Source Code Debloating</p>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <p class="content is-italic">Muaz Ali, <span class="has-text-weight-semibold"><em>Rumaisa
+                                Habib</em></span>, Ashish Gehani, Sazzadur Rahaman, Zartash Afzal Uzmi
+                            </p>
+                            <div class="content is-small">
+                                We propose BLADE that leverages the common coding idioms and language restrictions to build simple yet effective heuristics for faster source-code debloating.
+                            </div>
+                            <p class="content">IEEE Secure Development Conference 2023</p>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="/publications/blade.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
+                            <a href="https://github.com/pawnsac/blade" class="card-footer-item material-icons icon-link has-text-link" target="_blank">code</a>
+                        </footer>
+                        
+                        </div>
+                    </div>
+                <!-- End card -->
+               <!-- Begin card -->
+                <div class='column is-one-third'>
+                    <div class='card equal-height'>
+                    <header class="card-header has-background-primary" style="opacity:70%">
+                        <p class="card-header-title has-text-white">A Framework for Improving Web Affordability and Inclusiveness</p>
+                        </button>
+                    </header>
+                    <div class="card-content">
+                        <p class="content is-italic"><span class="has-text-weight-semibold"><em>Rumaisa
+                            Habib</em></span>*, Sarah Tanveer*, Aimen Inam, Haseeb Ahmed, Ayesha Ali, Zartash Afzal Uzmi, Zafar Ayyub Qazi, Ihsan Ayyub Qazi <span class="content has-text-grey-light is-small">[*Joint first authors]</span>
+                        </p>
+                        <div class="content is-small">
+                            We propose a novel framework and a fairness metric for rethinking Web architecture for affordability and inclusion.
+                        </div>
+                        <p class="content">ACM SIGCOMM 2023</p>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="/publications/framework-for-improving-affordability.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
+                        <a href="https://github.com/nsgLUMS/sigcomm2023-aw4a" class="card-footer-item material-icons icon-link has-text-link" target="_blank">code</a>
+                        <a href="https://youtu.be/RD73IgzQMFo?feature=shared&amp;t=1211" class="card-footer-item material-icons icon-link has-text-link" target="_blank">co_present</a>
+                        <a href="https://www.youtube.com/watch?v=AO6GANQFdiU&amp;ab_channel=ACMSIGCOMM" class="card-footer-item material-icons icon-link has-text-link" target="_blank">ondemand_video</a>
+                    </footer>
+                    
+                    </div>
+                </div>
+             <!-- End card -->
+
+             <!-- Begin card -->
+             <div class='column is-one-third'>
+                <div class='card equal-height'>
+                    <header class="card-header has-background-primary" style="opacity:70%">
+                        <p class="card-header-title has-text-white">A First Look at Public Service Websites from the Affordability Lens</p>
+                    </header>
+                    <div class="card-content">
+                        <p class="content is-italic"><span class="has-text-weight-semibold"><em>Rumaisa Habib</em></span>, Aimen Inam, Ayesha Ali, Ihsan Ayyub Qazi, Zafar Ayyub Qazi</p>
+                        <div class="content is-small">
+                            This paper presents the first large-scale analysis of the afordability of public service websites in developing countries
+                        </div>
+                        <p class="content">The Web Conference 2023</p>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="/publications/public-sites.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
+                        <a href="https://github.com/nsgLUMS/public-service-sites" class="card-footer-item material-icons icon-link has-text-link" target="_blank">code</a>
+                        <a href="https://youtu.be/Ni3GvG51mHo" class="card-footer-item material-icons icon-link has-text-link" target="_blank">ondemand_video</a>
+                    </footer>
+                </div>
+            </div>            
+         <!-- End card -->
+             </div>
+             <!-- End row -->
+            </div>
+         </div>
+         </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+            <a class="title has-text-link is-4" href="#talks"># Talks</a>
+            <ul class="space content">
+                <li>
+                    A Framework for Improving Web Affordability and Inclusiveness
+                   <ul class="space content">
+                      <li>
+                         SIGCOMM ‘23, September 2023, Columbia University, NY, USA
+                         <a href="https://docs.google.com/presentation/d/1bvluC01kf0dV1qp2LeISWC2dJYlnNC8N_vcUoGn7tg4/edit?usp=sharing" target="_blank" class="has-text-link material-icons">folder_shared</a>
+                      </li>
+                      <li>
+                         UW CHANGE Seminar, November 2023, Virtual, University of Washington, USA
+                         <a href="https://docs.google.com/presentation/d/1q0X5-t7U4DcXawmSx_rksRVSzVPreW1PW9579QS27JA/edit?usp=sharing" target="_blank" class="has-text-link material-icons">folder_shared</a>
+                      </li>
+                      <li>
+                         IAB BIAS Workshop, January 2024, Virtual
+                         <a href="https://docs.google.com/presentation/d/11Xhj_3OX-tTCApCwy5eezD6mrrJXz0mCFiIg8zRUn8M/edit?usp=sharing" target="_blank" class="has-text-link material-icons">folder_shared</a>
+                      </li>
+                   </ul>
+                </li>
+                <li>
+                   A First Look at Public Service Websites from the Affordability Lens
+                   <ul class="space content">
+                      <li>
+                         TheWebConf ‘23, May 2023, UT Austin, TX, USA
+                         <a href="https://docs.google.com/presentation/d/1hHj3lctd1-yH5C1G7un9Rzs384ZeIoquU1VBh1M5LsQ/edit?usp=sharing" target="_blank" class="has-text-link material-icons">folder_shared</a>
+                      </li>
+                   </ul>
+                </li>
+             </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+            <a class="title has-text-link is-4" href="#teaching"># Teaching</a>
+            <ul class="space content">
+                <li>
+                    Undergraduate Teaching Assistant, LUMS
+                    <ul class="space content">
+                        <li>CS678/EE678: Topics in Internet Research (Spring 2023)</li>
+                        <li>CS334/EE334: Principles and Techniques of Data Science (Fall 2022)</li>
+                        <li>CS3812: Introduction to Blockchain: Technology and Applications (Spring 2022)</li>
+                        <li>CS471/EE471/CS573: Computer Networks: Principles &amp; Practices (Fall 2021)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+      <section class="section">
+        <div class="container">
+            <a class="title has-text-link is-4" href="#awards"># Awards</a>
+            <ul class="space content">
+                <li>
+                    <a href="https://vpge.stanford.edu/fellowships-funding/sgf" target="_blank" class="has-text-link line-link">Stanford Graduate Fellowship in Science &amp; Engineering</a> (2023)
+                </li>
+                <li>
+                    Graduated undergrad with an Award of High Distinction (2023)
+                </li>
+                <li>
+                    Students as Co-Researchers Grant (2022)
+                </li>
+                <li>
+                    Dean’s Honor List (2019-2022)
+                </li>
+                <li>
+                    Merit Scholarship (2020-2023)
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
+    
+   </body>
+   <script>
+      // toggle between dark and light mode
+      const themeToggleButton = document.getElementById("theme-toggle");
+      themeToggleButton.addEventListener("click", () => {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+      });
+   </script>
+</html>
