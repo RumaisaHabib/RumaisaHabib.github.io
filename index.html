@@ -219,13 +219,25 @@
     
    </body>
    <script>
-      // toggle between dark and light mode
-      const themeToggleButton = document.getElementById("theme-toggle");
-      themeToggleButton.addEventListener("click", () => {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute("data-theme");
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-        html.setAttribute("data-theme", newTheme);
-      });
-   </script>
+    // use saved preference
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    });
+  
+    // toggle between dark and light mode and save choice
+    const themeToggleButton = document.getElementById("theme-toggle");
+    themeToggleButton.addEventListener("click", () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme") || "light";
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      html.setAttribute("data-theme", newTheme);
+  
+      // Save new theme preference
+      localStorage.setItem("theme", newTheme);
+    });
+  </script>
+  
 </html>
