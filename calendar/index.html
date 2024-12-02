@@ -1,0 +1,92 @@
+<!doctype html>
+<html data-theme="light">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CS PhD student at Stanford University">
+      <title>Calendar</title>
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="stylesheet" href="/main.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         #loading-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20; 
+    }
+
+    .spin {
+        animation: spin 1s linear infinite;
+        font-size: 48px;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+      </style>
+   </head>
+   <body>
+    <nav class="navbar is-centered">
+        <div class="container">
+           <div class="navbar-brand">
+              <a href="/" class="navbar-item">Home</a>
+              <a href="/publications" class="navbar-item">Publications</a>
+              <button>
+              <span class="material-icons navbar-item theme-icon" id="theme-toggle">wb_sunny</span>
+              </button>
+           </div>
+        </div>
+     </nav>
+      <section class="section big-screen">
+         <div class="container">
+            <h1 class="title has-text-primary is-3">Calendar</h1><p class="content">Schedule with me any time its not 'Busy', 'Tentative' or an egregiously late hour in Pacific Time <span class="content is-small">(unless you're my mother or advisor).</span></p>
+                  <div class="card">
+                    <iframe 
+                    src="https://outlook.office365.com/owa/calendar/36f4e8c02386409394ea937bd01ea520@stanford.edu/6609ad8c4eb047a69ed354a73673c86d6705511784996388/calendar.html" 
+                    width="100%" 
+                    height="800px" 
+                    frameborder="0" 
+                    style="border: none;">
+                </iframe>
+                  </div>
+
+         </div>
+      </section>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+           const savedTheme = localStorage.getItem("theme");
+       
+           if (savedTheme) {
+             // apply saved preference if it exists
+             document.documentElement.setAttribute("data-theme", savedTheme);
+           } else {
+             // use system preference
+             const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+             const systemTheme = prefersDarkScheme ? "dark" : "light";
+             document.documentElement.setAttribute("data-theme", systemTheme);
+           }
+         });
+       
+         // toggle between dark and light mode and save th choice
+         const themeToggleButton = document.getElementById("theme-toggle");
+         themeToggleButton.addEventListener("click", () => {
+           const html = document.documentElement;
+           const currentTheme = html.getAttribute("data-theme") || "light";
+           const newTheme = currentTheme === "light" ? "dark" : "light";
+           html.setAttribute("data-theme", newTheme);
+       
+           // Save new theme preference
+           localStorage.setItem("theme", newTheme);
+         });
+
+       </script>
+   </body>
+</html>
