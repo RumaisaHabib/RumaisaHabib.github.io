@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test website</title>
+	<p id="para">I have always been here</p>
+    <script>
+        // script that doesnt change the dom
+        var temp = 1
+        temp += 1
+    </script>
+	<script>
+		var a=document
+		var b=a.getElementById("para")
+		var t=a.createElement("p")
+		t.innerHTML="not me tho. i was added by inline javascript."
+		t.async=!0
+		b.appendChild(t)
+	</script>
+	<script>
+		var a=document
+		var b=a.getElementById("para")
+		var t=a.createElement("p")
+		t.innerHTML="me neitherrrrrr. I'm from another inline script."
+		t.async=!0
+		b.appendChild(t)
+	</script>
+</head>
+</html>
