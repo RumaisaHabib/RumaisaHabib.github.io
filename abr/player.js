@@ -14,7 +14,7 @@ async function sourceOpen() {
   const mime = 'video/mp4; codecs="avc1.640029"'; // adjust if your video uses a different codec
   const sourceBuffer = mediaSource.addSourceBuffer(mime);
 
-  const base = "171.67.71.217:8001/";
+  const base = "http://171.67.71.217:8001/";
 
   const initSegmentUrl = base + "720p_init.mp4";
   const segmentUrls = [
