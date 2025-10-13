@@ -46,6 +46,7 @@ async function sourceOpen() {
     if (i < segmentUrls.length) {
       const segment = await fetchSegment(segmentUrls[i++]);
       sourceBuffer.appendBuffer(segment);
+    //   console.log(sourceBuffer)
     } else if (mediaSource.readyState === "open") {
       mediaSource.endOfStream();
     }
@@ -53,8 +54,12 @@ async function sourceOpen() {
 }
 
 async function fetchSegment(url) {
-  const response = await fetch(url);
-  console.log(response)
-  if (!response.ok) throw new Error(`Failed to fetch ${url}`);
-  return new Uint8Array(await response.arrayBuffer());
-}
+    const response = await fetch(url, {
+      headers: {
+        'Bitrate': '720'
+      }
+    });
+    if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+    return new Uint8Array(await response.arrayBuffer());
+  }
+  
