@@ -36,7 +36,7 @@
             <div class="media is-align-items-center">
                <figure class="media-left">
                   <p class="image is-128x128">
-                     <img class="is-rounded" src="assets/me/me.png" />
+                     <img class="is-rounded" id="profile-pic" />
                   </p>
                </figure>
                <div class="media-content">
@@ -50,7 +50,7 @@
             </div>
             <p class="content"> I am a third-year CS PhD candidate at <span class="has-text-weight-semibold">Stanford
                University</span> advised by <a href="https://zakird.com/" target="_blank" class="has-text-weight-semibold line-link has-text-link">Zakir
-               Durumeric</a> and funded by the Stanford Graduate Fellowship. Before joining Stanford, I was at <span class=" has-text-weight-semibold">LUMS</span> (BS ‘23).
+               Durumeric</a> and funded by the Stanford Graduate Fellowship. My primary research interest is to build a better understanding of the web beyond the Western context. Before joining Stanford, I was at <span class=" has-text-weight-semibold">LUMS</span> (BS ‘23).
             </p>
             <p class="content is-small">At LUMS, I worked under the supervision of <a href="https://www.ihsanqazi.com/" target="_blank" class="has-text-weight-semibold line-link has-text-link">Ihsan
                Ayyub Qazi</a>, <a href="https://web.lums.edu.pk/~zafar/" target="_blank" class="has-text-weight-semibold line-link has-text-link">Zafar
@@ -79,6 +79,7 @@
                                In this work, we introduce a rigorous statistical metric for Internet centralization. In doing so, we also uncover how regionalization—geopolitical dependence on the Internet—fundamentally affects centralization.
                             </div>
                             <p class="content">ACM SIGCOMM 2025</p>
+                            <p class="has-text-weight-semibold">🏆 Applied Networking Research Prize 2026</p>
                         </div>
                         <footer class="card-footer">
                             <a href="/publications/centralization.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
@@ -196,6 +197,9 @@
             <a class="title has-text-link is-4" id="awards" href="#awards"># Awards/ایوارڈز</a>
             <ul class="space content">
                 <li>
+                    <a href="https://www.irtf.org/anrp/" target="_blank" class="has-text-link line-link">Applied Networking Research Prize</a> (2026)
+                </li>
+                <li>
                     <a href="https://vpge.stanford.edu/fellowships-funding/sgf" target="_blank" class="has-text-link line-link">Stanford Graduate Fellowship in Science &amp; Engineering</a> (2023)
                 </li>
                 <li>
@@ -217,6 +221,12 @@
     
     
    </body>
+   <script>
+  const img = document.getElementById("profile-pic");
+  img.src = (Math.random() < 0.05)
+    ? "assets/me/alt.jpeg"
+    : "assets/me/me.jpeg";
+</script>
    <script>
     document.addEventListener("DOMContentLoaded", () => {
       const savedTheme = localStorage.getItem("theme");
