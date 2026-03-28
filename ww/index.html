@@ -1,0 +1,718 @@
+<!doctype html>
+<html data-theme="dark">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HTML/Text labelling tool">
+
+<title>Labelling Tool</title>
+
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="stylesheet" href="/main.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<style>
+#loading-icon-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:40px;
+}
+
+.spin{
+animation:spin 1s linear infinite;
+font-size:48px;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+.tool-wrap{
+max-width:1200px;
+margin:0 auto;
+padding:1.5rem;
+}
+
+.cardish{
+border:1px solid rgba(128,128,128,0.25);
+border-radius:12px;
+padding:1rem;
+margin-bottom:1rem;
+background:rgba(255,255,255,0.03);
+}
+
+.pair-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:1rem;
+}
+
+.muted{
+opacity:.75;
+font-size:.95rem;
+}
+
+.mono-box{
+white-space:pre-wrap;
+word-break:break-word;
+overflow-wrap:anywhere;
+font-family:ui-monospace,Menlo,Consolas,monospace;
+font-size:.92rem;
+line-height:1.4;
+border:1px solid rgba(128,128,128,.25);
+border-radius:10px;
+padding:.9rem;
+max-height:420px;
+overflow:auto;
+background:rgba(0,0,0,.08);
+}
+
+.rating-group{
+display:flex;
+gap:.5rem;
+flex-wrap:wrap;
+margin-top:.5rem;
+}
+
+.rating-group label{
+display:inline-flex;
+align-items:center;
+gap:.35rem;
+padding:.45rem .7rem;
+border:1px solid rgba(128,128,128,.25);
+border-radius:999px;
+cursor:pointer;
+}
+
+.top-controls{
+display:grid;
+grid-template-columns:1fr auto auto auto;
+gap:.75rem;
+align-items:end;
+}
+
+input[type=text],button{
+padding:.65rem .8rem;
+border-radius:10px;
+border:1px solid rgba(128,128,128,.35);
+background:transparent;
+color:inherit;
+}
+
+button{cursor:pointer;}
+
+.button-row{
+display:flex;
+gap:.75rem;
+flex-wrap:wrap;
+margin-top:1rem;
+}
+
+.status-line{
+display:flex;
+justify-content:space-between;
+gap:1rem;
+flex-wrap:wrap;
+margin-bottom:1rem;
+}
+
+.hidden{display:none!important;}
+
+.pill{
+padding:.35rem .7rem;
+border-radius:999px;
+border:1px solid rgba(128,128,128,.25);
+font-size:.9rem;
+}
+
+.section-spacer{height:2rem;}
+
+.followup-box{
+margin-top:1rem;
+padding:.9rem;
+border:1px solid rgba(128,128,128,.2);
+border-radius:10px;
+background:rgba(255,255,255,.02);
+}
+
+@media (max-width: 900px){
+  .pair-grid{
+    grid-template-columns:1fr;
+  }
+
+  .top-controls{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<nav class="navbar is-centered">
+<div class="container">
+<div class="navbar-brand">
+<a href="/" class="navbar-item">Home</a>
+<a href="/publications" class="navbar-item">Publications</a>
+
+<button type="button">
+<span class="material-icons navbar-item theme-icon" id="theme-toggle">wb_sunny</span>
+</button>
+</div>
+</div>
+</nav>
+
+
+<section class="section big-screen">
+
+<div class="tool-wrap">
+
+<div class="cardish">
+
+<h1>Qualitative Similarity Labelling</h1>
+
+<p class="muted">
+Compare the text content of webpage A and webpage B.
+
+<br><br>
+
+1 = totally different<br>
+2 = slightly similar<br>
+3 = moderately similar<br>
+4 = very similar<br>
+5 = identical
+</p>
+
+
+<div class="top-controls">
+
+<div>
+<label for="labellerName"><strong>Labeller name</strong></label><br>
+<input id="labellerName" type="text" placeholder="e.g. rumi">
+</div>
+
+<button id="startBtn" type="button">Load / Continue</button>
+<button id="exportBtn" type="button" disabled>Export Progress</button>
+
+<label for="importFile">
+<span style="padding:.65rem .8rem;border:1px solid rgba(128,128,128,.35);border-radius:10px;cursor:pointer;display:inline-block;">Import Progress</span>
+<input id="importFile" type="file" accept=".json" class="hidden">
+</label>
+
+</div>
+
+
+<div class="button-row">
+<button id="clearBtn" type="button" disabled>Clear My Progress</button>
+<span id="saveStatus" class="pill">Not loaded</span>
+</div>
+
+</div>
+
+
+
+<div id="loading-icon-container" class="hidden">
+<span class="material-icons spin">refresh</span>
+</div>
+
+
+
+<div id="app" class="hidden">
+
+
+<div class="cardish">
+
+<div class="status-line">
+
+<div>
+<strong>Current labeller:</strong> <span id="whoLabel"></span><br>
+<strong>URL:</strong> <span id="urlLabel"></span>
+</div>
+
+<div>
+<strong>Completed:</strong> <span id="completedCount"></span> /
+<span id="totalCount"></span><br>
+
+<strong>Remaining:</strong> <span id="remainingCount"></span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id="doneCard" class="cardish hidden">
+<h2>All done</h2>
+<p>You have labeled every row.</p>
+</div>
+
+
+
+<div id="labelCard">
+
+
+<div class="cardish">
+
+<h2>Textual Similarity</h2>
+
+<div class="pair-grid">
+
+<div>
+<p class="muted"><strong>Webpage A</strong></p>
+<div id="textBoxA" class="mono-box"></div>
+</div>
+
+<div>
+<p class="muted"><strong>Webpage B</strong></p>
+<div id="textBoxB" class="mono-box"></div>
+</div>
+
+</div>
+
+
+<div style="margin-top:1rem">
+
+<strong>Text similarity rating</strong>
+
+<div class="rating-group" id="textRatingGroup"></div>
+
+<div id="infoFollowup" class="followup-box hidden">
+  <strong>Since you selected 1, which webpage has more information?</strong>
+  <div class="rating-group" id="infoMoreGroup"></div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="section-spacer"></div>
+
+
+<div class="cardish">
+
+<div class="button-row">
+<button id="saveNextBtn" type="button">Save and Next</button>
+<button id="skipBtn" type="button">Skip for now</button>
+</div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  } else {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const systemTheme = prefersDarkScheme ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", systemTheme);
+  }
+});
+
+const themeToggleButton = document.getElementById("theme-toggle");
+themeToggleButton.addEventListener("click", () => {
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute("data-theme") || "light";
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+
+const CSV_PATH = "data/labels.csv";
+const STORAGE_PREFIX = "text_label_tool_v3";
+
+let rows = [];
+let currentIndex = null;
+let currentLabeller = "";
+let progress = {};
+let order = [];
+
+const els = {
+  app: document.getElementById("app"),
+  loading: document.getElementById("loading-icon-container"),
+  whoLabel: document.getElementById("whoLabel"),
+  urlLabel: document.getElementById("urlLabel"),
+  completedCount: document.getElementById("completedCount"),
+  totalCount: document.getElementById("totalCount"),
+  remainingCount: document.getElementById("remainingCount"),
+  textBoxA: document.getElementById("textBoxA"),
+  textBoxB: document.getElementById("textBoxB"),
+  textRatingGroup: document.getElementById("textRatingGroup"),
+  infoFollowup: document.getElementById("infoFollowup"),
+  infoMoreGroup: document.getElementById("infoMoreGroup"),
+  startBtn: document.getElementById("startBtn"),
+  saveNextBtn: document.getElementById("saveNextBtn"),
+  skipBtn: document.getElementById("skipBtn"),
+  exportBtn: document.getElementById("exportBtn"),
+  clearBtn: document.getElementById("clearBtn"),
+  importFile: document.getElementById("importFile"),
+  labellerName: document.getElementById("labellerName"),
+  saveStatus: document.getElementById("saveStatus"),
+  doneCard: document.getElementById("doneCard"),
+  labelCard: document.getElementById("labelCard")
+};
+
+function progressKey(name){
+  return `${STORAGE_PREFIX}::progress::${name}`;
+}
+
+function orderKey(name){
+  return `${STORAGE_PREFIX}::order::${name}`;
+}
+
+function normalizeLabellerName(name){
+  return name.trim().toLowerCase().replace(/\s+/g, "_");
+}
+
+function loadCSV(){
+  return new Promise((resolve,reject)=>{
+    Papa.parse(CSV_PATH,{
+      download:true,
+      header:true,
+      skipEmptyLines:true,
+      complete:(res)=>{
+        rows = res.data.map((r,i)=>({
+          id:i,
+          url:(r.url || "").trim(),
+          textA:(r.text_content_a || "").trim(),
+          textB:(r.text_content_b || "").trim()
+        }));
+        resolve();
+      },
+      error:reject
+    });
+  });
+}
+
+function shuffle(array){
+  const copy = [...array];
+  for(let i = copy.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function buildDefaultOrder(){
+  return shuffle(rows.map(r => r.id));
+}
+
+function loadOrCreateOrder(name){
+  const saved = localStorage.getItem(orderKey(name));
+  if(saved){
+    try{
+      const parsed = JSON.parse(saved);
+
+      if(
+        Array.isArray(parsed) &&
+        parsed.length === rows.length &&
+        parsed.every(v => Number.isInteger(v))
+      ){
+        const sortedParsed = [...parsed].sort((a,b)=>a-b);
+        const expected = rows.map(r => r.id).sort((a,b)=>a-b);
+
+        if(JSON.stringify(sortedParsed) === JSON.stringify(expected)){
+          return parsed;
+        }
+      }
+    } catch(e){}
+  }
+
+  const newOrder = buildDefaultOrder();
+  localStorage.setItem(orderKey(name), JSON.stringify(newOrder));
+  return newOrder;
+}
+
+function makeRatings(){
+  els.textRatingGroup.innerHTML = "";
+
+  for(let i = 1; i <= 5; i++){
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="text_rating" value="${i}"> ${i}`;
+    els.textRatingGroup.appendChild(label);
+  }
+
+  document.querySelectorAll('input[name="text_rating"]').forEach(input => {
+    input.addEventListener("change", handleRatingChange);
+  });
+}
+
+function makeInfoMoreOptions(){
+  els.infoMoreGroup.innerHTML = "";
+
+  const options = [
+    { value: "a", label: "Webpage A has more information" },
+    { value: "b", label: "Webpage B has more information" },
+    { value: "neither_unsure", label: "Neither / Unsure" }
+  ];
+
+  for(const option of options){
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="more_info" value="${option.value}"> ${option.label}`;
+    els.infoMoreGroup.appendChild(label);
+  }
+}
+
+function handleRatingChange(){
+  const rating = getRating();
+
+  if(rating === 1){
+    els.infoFollowup.classList.remove("hidden");
+  } else {
+    els.infoFollowup.classList.add("hidden");
+    clearMoreInfoSelection();
+  }
+}
+
+function clearMoreInfoSelection(){
+  document.querySelectorAll('input[name="more_info"]').forEach(r => {
+    r.checked = false;
+  });
+}
+
+function getMoreInfoChoice(){
+  const r = document.querySelector('input[name="more_info"]:checked');
+  return r ? r.value : null;
+}
+
+function nextIndex(){
+  for(const rowId of order){
+    if(!(rowId in progress)) return rowId;
+  }
+  return null;
+}
+
+function render(){
+  currentIndex = nextIndex();
+
+  els.totalCount.textContent = rows.length;
+  els.completedCount.textContent = Object.keys(progress).length;
+  els.remainingCount.textContent = rows.length - Object.keys(progress).length;
+
+  if(currentIndex === null){
+    els.doneCard.classList.remove("hidden");
+    els.labelCard.classList.add("hidden");
+    els.urlLabel.textContent = "";
+    els.textBoxA.textContent = "";
+    els.textBoxB.textContent = "";
+    return;
+  }
+
+  els.doneCard.classList.add("hidden");
+  els.labelCard.classList.remove("hidden");
+
+  const row = rows.find(r => r.id === currentIndex);
+
+  els.whoLabel.textContent = currentLabeller;
+  els.urlLabel.textContent = row.url;
+  els.textBoxA.textContent = row.textA;
+  els.textBoxB.textContent = row.textB;
+
+  document.querySelectorAll('input[name="text_rating"]').forEach(r => r.checked = false);
+  clearMoreInfoSelection();
+  els.infoFollowup.classList.add("hidden");
+}
+
+function getRating(){
+  const r = document.querySelector('input[name="text_rating"]:checked');
+  return r ? Number(r.value) : null;
+}
+
+function updateSaveStatus(msg){
+  els.saveStatus.textContent = msg;
+}
+
+function saveProgress(){
+  localStorage.setItem(progressKey(currentLabeller), JSON.stringify(progress));
+  updateSaveStatus(`Saved ${new Date().toLocaleTimeString()}`);
+}
+
+function exportCurrentProgress(){
+  const payload = {
+    labeller: currentLabeller,
+    progress,
+    order
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${currentLabeller}_progress.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function importProgressFile(file){
+  if(!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const parsed = JSON.parse(reader.result);
+
+      if(typeof parsed !== "object" || parsed === null){
+        alert("Invalid JSON file.");
+        return;
+      }
+
+      const importedProgress = parsed.progress;
+      const importedOrder = parsed.order;
+
+      if(typeof importedProgress !== "object" || importedProgress === null){
+        alert("Missing progress in imported file.");
+        return;
+      }
+
+      if(!Array.isArray(importedOrder)){
+        alert("Missing order in imported file.");
+        return;
+      }
+
+      progress = importedProgress;
+      order = importedOrder;
+
+      localStorage.setItem(progressKey(currentLabeller), JSON.stringify(progress));
+      localStorage.setItem(orderKey(currentLabeller), JSON.stringify(order));
+
+      render();
+      updateSaveStatus("Imported progress");
+    } catch(e){
+      alert("Could not read that JSON progress file.");
+    }
+  };
+  reader.readAsText(file);
+}
+
+els.saveNextBtn.onclick = () => {
+  const rating = getRating();
+
+  if(rating === null){
+    alert("Please choose a rating");
+    return;
+  }
+
+  let moreInfo = null;
+
+  if(rating === 1){
+    moreInfo = getMoreInfoChoice();
+
+    if(moreInfo === null){
+      alert("Please choose which webpage has more information, or select Neither / Unsure.");
+      return;
+    }
+  }
+
+  const row = rows.find(r => r.id === currentIndex);
+
+  progress[currentIndex] = {
+    url: row.url,
+    rating,
+    more_info: moreInfo
+  };
+
+  saveProgress();
+  render();
+};
+
+els.skipBtn.onclick = () => {
+  render();
+};
+
+els.startBtn.onclick = async () => {
+  currentLabeller = normalizeLabellerName(els.labellerName.value);
+
+  if(!currentLabeller){
+    alert("Enter name");
+    return;
+  }
+
+  els.loading.classList.remove("hidden");
+
+  try{
+    if(rows.length === 0){
+      await loadCSV();
+    }
+
+    progress = JSON.parse(localStorage.getItem(progressKey(currentLabeller)) || "{}");
+    order = loadOrCreateOrder(currentLabeller);
+
+    els.app.classList.remove("hidden");
+    els.exportBtn.disabled = false;
+    els.clearBtn.disabled = false;
+
+    render();
+    updateSaveStatus("Loaded");
+  } catch(err){
+    alert("Failed to load CSV.");
+    updateSaveStatus("Failed to load");
+  } finally {
+    els.loading.classList.add("hidden");
+  }
+};
+
+els.exportBtn.onclick = () => {
+  if(!currentLabeller) return;
+  exportCurrentProgress();
+};
+
+els.importFile.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if(!currentLabeller){
+    alert("Enter labeller name and click Load / Continue first.");
+    e.target.value = "";
+    return;
+  }
+  importProgressFile(file);
+  e.target.value = "";
+});
+
+els.clearBtn.onclick = () => {
+  if(!currentLabeller) return;
+
+  const ok = confirm(`Clear all saved progress for "${currentLabeller}"?`);
+  if(!ok) return;
+
+  localStorage.removeItem(progressKey(currentLabeller));
+  localStorage.removeItem(orderKey(currentLabeller));
+
+  progress = {};
+  order = loadOrCreateOrder(currentLabeller);
+
+  render();
+  updateSaveStatus("Cleared");
+};
+
+makeRatings();
+makeInfoMoreOptions();
+
+loadCSV()
+  .then(() => {
+    updateSaveStatus(`Dataset loaded (${rows.length} rows)`);
+  })
+  .catch(() => {
+    updateSaveStatus("Failed to load CSV");
+  });
+</script>
+
+</body>
+</html>
