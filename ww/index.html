@@ -557,7 +557,7 @@ function exportCurrentProgress(){
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `${currentLabeller}_progress.json`;
+  a.download = `${currentLabeller}_labels.json`;
   a.click();
   URL.revokeObjectURL(a.href);
 }
