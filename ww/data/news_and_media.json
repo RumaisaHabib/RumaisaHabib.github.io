@@ -1,0 +1,86 @@
+[
+    {
+        "task_id": 0,
+        "task": "Open the latest article on the homepage and summarize its main point.",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 8.0
+    },
+    {
+        "task_id": 1,
+        "task": "Search the site for the latest news about a specific topic and open the newest relevant article.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 3.0
+    },
+    {
+        "task_id": 2,
+        "task": "Open the latest news release or press release and extract the media contact information.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 0.5
+    },
+    {
+        "task_id": 3,
+        "task": "Find the author of the latest article and open that author's profile or author page.",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 0.5
+    },
+    {
+        "task_id": 4,
+        "task": "Find two other articles written by the same author as any article on the homepage.",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 0.5
+    },
+    {
+        "task_id": 5,
+        "task": "Open the first or most recent article in a specific section and summarize the key takeaway.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 4.0
+    },
+        {
+        "task_id": 14,
+        "task": "List the newest headlines on a site for a specified topic or section.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 1.0
+    },
+    {
+        "task_id": 7,
+        "task": "Find the most recent score, standings, roster, or player update for a specified sports team.",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 0.5
+    },
+    {
+        "task_id": 8,
+        "task": "Find the latest entertainment news about a specific movie, TV show, game, or celebrity.",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 0.5
+    },
+    {
+        "task_id": 9,
+        "task": "Find critic reviews, ratings, or audience scores for a specified movie, show, game, or article",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 0.5
+    },
+    {
+        "task_id": 10,
+        "task": "Browse a topic page and open the top or trending headline in that topic.",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 3.0
+    },
+    {
+        "task_id": 11,
+        "task": "Find the latest video, clip, or highlight related to a news or sports topic and play the video",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 1.0
+    },
+    {
+        "task_id": 12,
+        "task": "Leave a comment on a featured or popular article",
+        "source": "Manual",
+        "weight": 1.0
+    },
+    {
+        "task_id": 13,
+        "task": "Click one of the social media links associated with the article",
+        "source": "Manual",
+        "weight": 1.0   
+    }
+]

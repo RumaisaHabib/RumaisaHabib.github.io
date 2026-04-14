@@ -1,0 +1,92 @@
+[
+  {
+    "task_id": 0,
+    "task": "Search for a product relevant to the site using the search feature",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 4.0
+  },
+  {
+    "task_id": 1,
+    "task": "Browse products within a category",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 4.0
+  },
+  {
+    "task_id": 2,
+    "task": "Filter products by attributes and constraints",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 2.0
+  },
+  {
+    "task_id": 3,
+    "task": "Filter results by brand",
+    "source": "Derived from Mind2Web tasks",
+    "weight": 2.0
+  },
+  {
+    "task_id": 4,
+    "task": "Filter results by size or color",
+    "source": "Derived from Mind2Web tasks",
+    "weight": 2.0
+  },
+  {
+    "task_id": 5,
+    "task": "Sort products by lowest price.",
+    "source": "Derived from Mind2Web tasks",
+    "weight": 3.0
+  },
+  {
+    "task_id": 6,
+    "task": "Sort products by highest rating",
+    "source": "Derived from Mind2Web tasks",
+    "weight": 3.0
+  },
+  {
+    "task_id": 7,
+    "task": "Find the cheapest or best-value option",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 2.0
+  },
+  {
+    "task_id": 8,
+    "task": "Find products on sale or within a budget of $100",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 2.0
+  },
+  {
+    "task_id": 9,
+    "task": "Compare similar products to the first product listed on the page",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 1.0
+  },
+  {
+    "task_id": 10,
+    "task": "Check stock, shipping, pickup, or delivery availability",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 1.0
+  },
+  {
+    "task_id": 11,
+    "task": "Navigate to the product details page of an item with multiple styles and select a different size,color, or configuration",
+    "source": "Manual",
+    "weight": 2.0
+  },
+  {
+    "task_id": 12,
+    "task": "Add an item to cart",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 4.0
+  },
+  {
+    "task_id": 13,
+    "task": "Remove an item from cart",
+    "source": "Derived from Mind2Web tasks",
+    "weight": 4.0
+  },
+  {
+    "task_id": 14,
+    "task": "Navigate to the checkout page and verify product details",
+    "source": "Derived from WebTailBench tasks",
+    "weight": 4.0
+  }
+]

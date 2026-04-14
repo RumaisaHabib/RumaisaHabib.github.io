@@ -1,0 +1,86 @@
+[
+    {
+        "task_id": 0,
+        "task": "Search for a video using site-relevant keywords using the search bar",
+        "source": "Derived from WebTailBench tasks",
+        "weight": 5.0
+    },
+    {
+        "task_id": 1,
+        "task": "Add a video, tv show, or movie to the watchlist.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 2.0
+    },
+    {
+        "task_id": 2,
+        "task": "Edit an existing watchlist by adding or removing a video.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 1.0
+    },
+    {
+        "task_id": 3,
+        "task": "Click on a video to open the player and stream the video",
+        "source": "Manual",
+        "weight": 6.0
+    },
+    {
+        "task_id": 4,
+        "task": "Begin playing a featured video, pause the video, wait a few seconds, and then resume the video",
+        "source": "Manual",
+        "weight": 5.0
+    },
+    {
+        "task_id": 5,
+        "task": "Begin playing a featured video and adjust the volume of the video",
+        "source": "Manual",
+        "weight": 5.0
+    },
+    {
+        "task_id": 6,
+        "task": "Begin playing a featured video and adjust playback speed.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 1.0
+    },
+    {
+        "task_id": 7,
+        "task": "Filter for top videos by popularity or rating.",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 1.0
+    },
+    {
+        "task_id": 8,
+        "task": "Begin playing a video, enter fullscreen mode, wait a few seconds, and then exit fullscreen mode.",
+        "source": "Manual",
+        "weight": 3.0
+    },
+    {
+        "task_id": 9,
+        "task": "Begin playing a video, then mute the video",
+        "source": "Manual",
+        "weight": 3.0
+    },
+    {
+        "task_id": 10,
+        "task": "Filter videos by subject or keyword. Use a site-relevant keyword of choice for this",
+        "source": "Derived from Mind2Web tasks",
+        "weight": 1.0
+    },
+    {
+        "task_id": 11,
+        "task": "Begin playing any video over 30 seconds, then fast forward the video by 10 seconds",
+        "source": "Manual",
+        "weight": 1.0
+    },
+    {
+        "task_id": 12,
+        "task": "Begin playing any video over 30 seconds, then rewind the video by 10 seconds",
+        "source": "Manual",
+        "weight": 2.5
+    },
+        {
+        "task_id": 13,
+        "task": "Begin playing any video over 30 seconds, then seek to a specific, randomly, chosen timestamp that is shorter than the video length",
+        "source": "Manual",
+        "weight": 4.0
+    }
+]
