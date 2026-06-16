@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="CS PhD student at Stanford University">
+      <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "@id": "https://rumaisahabib.com/#person", "name": "Rumaisa Habib", "url": "https://rumaisahabib.com/", "image": "https://rumaisahabib.com/assets/me/me.jpeg", "description": "Rumaisa Habib is a CS PhD candidate at Stanford University.", "affiliation": { "@type": "CollegeOrUniversity", "name": "Stanford University", "url": "https://www.stanford.edu/" }, "sameAs": [ "https://profiles.stanford.edu/rumaisa-habib", "https://orcid.org/0000-0003-1071-1204", "https://scholar.google.com/citations?hl=en&user=FEM0WXwAAAAJ", "https://www.linkedin.com/in/rumaisahabib", "https://github.com/RumaisaHabib", "https://rumaisahabib.github.io/" ] } </script>
       <title>Rumi</title>
       <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
       <link rel="stylesheet" href="/main.css">
@@ -16,6 +17,50 @@
          justify-content: center;
          align-items: center; 
          }
+         .bib-dropdown {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bib-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.bib-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.bibtex {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 36rem;
+  max-width: 90vw;
+
+  z-index: 10;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 0.75rem;
+  overflow-x: auto;
+
+  background: var(--bulma-card-background-color, var(--background));
+  color: var(--bulma-text, var(--text));
+  border: 1px solid var(--bulma-border, var(--border));
+  border-radius: 0.5rem;
+  box-shadow: var(--bulma-card-shadow, 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12));
+}
+
+.bibtex code {
+  color: inherit;
+  background: transparent;
+}
       </style>
    </head>
    <body>
@@ -82,8 +127,20 @@
                             <p class="has-text-weight-semibold">🏆 Applied Networking Research Prize 2026</p>
                         </div>
                         <footer class="card-footer">
-                            <a href="/publications/centralization.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
-                        </footer>
+  <a href="/publications/centralization.pdf"
+     class="card-footer-item material-icons icon-link has-text-link"
+     target="_blank">description</a>
+
+  <details class="card-footer-item bib-dropdown">
+    <summary class="has-text-link has-text-weight-semibold">ha.bib</summary>
+    <pre class="bibtex"><code>@inproceedings{habib2025centralization,
+  title={Formalizing Dependence of Web Infrastructure},
+  author={Habib, Rumaisa and Ruth, Kimberly and Akiwate, Gautam and Durumeric, Zakir},
+  booktitle={Proceedings of the ACM SIGCOMM Conference},
+  year={2025}
+}</code></pre>
+  </details>
+</footer>
                         
                         </div>
                     </div>
@@ -105,11 +162,21 @@
                         <p class="content">ACM SIGCOMM 2023</p>
                     </div>
                     <footer class="card-footer">
-                        <a href="/publications/framework-for-improving-affordability.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
-                        <a href="https://github.com/nsgLUMS/sigcomm2023-aw4a" class="card-footer-item material-icons icon-link has-text-link" target="_blank">code</a>
-                        <a href="https://youtu.be/RD73IgzQMFo?feature=shared&amp;t=1211" class="card-footer-item material-icons icon-link has-text-link" target="_blank">co_present</a>
-                        <a href="https://www.youtube.com/watch?v=AO6GANQFdiU&amp;ab_channel=ACMSIGCOMM" class="card-footer-item material-icons icon-link has-text-link" target="_blank">ondemand_video</a>
-                    </footer>
+  <a href="/publications/framework-for-improving-affordability.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
+  <a href="https://github.com/nsgLUMS/sigcomm2023-aw4a" class="card-footer-item material-icons icon-link has-text-link" target="_blank">code</a>
+  <a href="https://youtu.be/RD73IgzQMFo?feature=shared&amp;t=1211" class="card-footer-item material-icons icon-link has-text-link" target="_blank">co_present</a>
+  <a href="https://www.youtube.com/watch?v=AO6GANQFdiU&amp;ab_channel=ACMSIGCOMM" class="card-footer-item material-icons icon-link has-text-link" target="_blank">ondemand_video</a>
+
+  <details class="card-footer-item bib-dropdown">
+    <summary class="has-text-link has-text-weight-semibold">ha.bib</summary>
+    <pre class="bibtex"><code>@inproceedings{habib2023aw4a,
+  title={A Framework for Improving Web Affordability and Inclusiveness},
+  author={Habib, Rumaisa and Tanveer, Sarah and Inam, Aimen and Ahmed, Haseeb and Ali, Ayesha and Uzmi, Zartash Afzal and Qazi, Zafar Ayyub and Qazi, Ihsan Ayyub},
+  booktitle={Proceedings of the ACM SIGCOMM Conference},
+  year={2023}
+}</code></pre>
+  </details>
+</footer>
                     
                     </div>
                 </div>
@@ -132,6 +199,15 @@
                         <a href="/publications/public-sites.pdf" class="card-footer-item material-icons icon-link has-text-link" target="_blank">description</a>
                         <a href="https://github.com/nsgLUMS/public-service-sites" class="card-footer-item material-icons icon-link has-text-link" target="_blank">code</a>
                         <a href="https://youtu.be/Ni3GvG51mHo" class="card-footer-item material-icons icon-link has-text-link" target="_blank">ondemand_video</a>
+                        <details class="card-footer-item bib-dropdown">
+  <summary class="has-text-link has-text-weight-semibold">ha.bib</summary>
+  <pre class="bibtex"><code>@inproceedings{habib2023publicservice,
+  title={A First Look at Public Service Websites from the Affordability Lens},
+  author={Habib, Rumaisa and Inam, Aimen and Ali, Ayesha and Qazi, Ihsan Ayyub and Qazi, Zafar Ayyub},
+  booktitle={Proceedings of the ACM Web Conference},
+  year={2023}
+}</code></pre>
+</details>
                     </footer>
                 </div>
             </div>            
