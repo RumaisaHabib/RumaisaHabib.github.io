@@ -5,6 +5,11 @@
   },
   "scripts": {
     "build-bulma": "sass --load-path=node_modules main.scss main.css",
-    "start": "npm run build-bulma -- --watch"
+    "start": "npm run build-bulma -- --watch",
+    "build-markdown": "node scripts/build-markdown.mjs"
+  },
+  "devDependencies": {
+    "@mixmark-io/domino": "2.2.0",
+    "turndown": "7.2.4"
   }
 }
