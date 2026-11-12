@@ -7,8 +7,8 @@
 // The file names follow the llms.txt convention (page URL + ".md", with
 // "index.html.md" for directory URLs), so they also work as direct links.
 //
-// The output deliberately has no YAML front matter: GitHub Pages runs Jekyll,
-// which would turn a .md file that starts with "---" into HTML.
+// The repo root has a .nojekyll file so GitHub Pages serves these files as-is;
+// without it, Jekyll converts every .md file into HTML (index.html.html).
 //
 // Run after editing any page:  npm run build-markdown
 
