@@ -4,7 +4,7 @@
     "sass": "^1.81.0"
   },
   "scripts": {
-    "build-bulma": "sass --load-path=node_modules main.scss main.css",
+    "build-bulma": "sass --load-path=node_modules --style=compressed main.scss main.css",
     "start": "npm run build-bulma -- --watch",
     "build-markdown": "node scripts/build-markdown.mjs"
   },

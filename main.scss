@@ -7,25 +7,88 @@ $soft-pink: #a6808c;
 $beige-light: #ccb7ae;
 $beige-lighter: #d6cfcb;
 
+@use "sass:color";
+
 // Path to Bulma's sass folder
-@use "bulma/sass" with (
+@use "bulma/sass/utilities" with (
   $family-primary: '"Nunito", sans-serif',
   $grey-dark: $soft-pink,
   $grey-light: $beige-light,
   $primary: $green,
   $info: $bright-green,
   $link: $green,
-  $control-border-width: 5px,
-  $input-shadow: none
+  $control-border-width: 5px
 );
+@use "bulma/sass/themes";
+@use "bulma/sass/base";
+@use "bulma/sass/elements/content";
+@use "bulma/sass/elements/image";
+@use "bulma/sass/elements/title";
+@use "bulma/sass/components/card";
+@use "bulma/sass/components/navbar";
+@use "bulma/sass/grid/columns";
+@use "bulma/sass/layout/container";
+@use "bulma/sass/layout/media";
+@use "bulma/sass/layout/section";
+@use "bulma/sass/helpers/flexbox";
+@use "bulma/sass/helpers/typography";
 
-@media only screen and (min-device-width : 480px) {
-            .big-screen {
-                padding-left: 15%;
-                padding-right: 15%;
+@mixin light-text-colors {
+  --bulma-text: hsl(var(--bulma-text-h), var(--bulma-text-s), 50%);
+  --site-primary-text-l: 34%;
+  --site-link-text-l: 34%;
+  --site-grey-light-text: #{color.adjust($beige-light, $lightness: -15%)};
 
-            }
-            }
+  .navbar {
+    --bulma-navbar-item-color-l: 49%;
+  }
+
+  .small-note {
+    opacity: 0.77;
+  }
+}
+
+[data-theme=light] {
+  @include light-text-colors;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    @include light-text-colors;
+  }
+}
+
+@each $name in ("white", "primary", "link") {
+  $l: var(--site-#{$name}-text-l, var(--bulma-#{$name}-l));
+  .has-text-#{$name} {
+    color: hsl(var(--bulma-#{$name}-h), var(--bulma-#{$name}-s), $l) !important;
+  }
+  a.has-text-#{$name},
+  button.has-text-#{$name} {
+    &:hover,
+    &:focus-visible {
+      color: hsl(var(--bulma-#{$name}-h), var(--bulma-#{$name}-s), calc(#{$l} + var(--bulma-hover-color-l-delta))) !important;
+    }
+    &:active {
+      color: hsl(var(--bulma-#{$name}-h), var(--bulma-#{$name}-s), calc(#{$l} + var(--bulma-active-color-l-delta))) !important;
+    }
+  }
+}
+
+.has-background-primary {
+  background-color: hsl(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l)) !important;
+}
+
+.has-text-grey-light {
+  color: var(--site-grey-light-text, #{$beige-light}) !important;
+}
+
+@media screen and (min-width: 480px) {
+  .big-screen {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 
 
 
@@ -45,7 +108,7 @@ $beige-lighter: #d6cfcb;
 }
 .navbar {
   padding-left: 1em;
-  padding-right: 1em
+  padding-right: 1em;
 }
 
 
@@ -71,6 +134,19 @@ $beige-lighter: #d6cfcb;
 
 /* vertically align material icons */
 .material-icons {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
   vertical-align: middle;
 }
 
@@ -78,5 +154,3 @@ $beige-lighter: #d6cfcb;
 .small-note {
   opacity: 0.6;
 }
-// Import the Google Font
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");

@@ -1,10 +1,12 @@
+![Rumaisa Habib](https://rumaisahabib.com/assets/me/me-256.jpg)
+
 # Rumaisa "Rumi" Habib/رومیسہ حبیب
 
 frog enthusiast, PhD student (in that order)
 
 rumaisa {at} cs {dot} stanford {dot} edu | [cv](https://rumaisahabib.com/assets/habib.pdf) | [pgp key](https://rumaisahabib.com/assets/pgp.txt) | [scholar](https://scholar.google.com/citations?user=FEM0WXwAAAAJ&hl=en)
 
-I am a fourth-year CS PhD candidate in the [Empirical Security Research Group](https://esrg.stanford.edu/) at **Stanford University** advised by [Zakir Durumeric](https://zakird.com/) and funded by the Stanford Graduate Fellowship. My primary research interest is understanding the web at a global scale. I combine large-scale measurement and systems building to study how the web works in practice and who it actually serves, especially outside Western contexts. I aim to replace informal intuitions about the web with rigorous evidence that can inform both system design and policy. Before joining Stanford, I was at **LUMS** (BS ‘23).
+I am a fourth-year CS PhD candidate in the [Empirical Security Research Group](https://esrg.stanford.edu/) at **Stanford University** advised by [Zakir Durumeric](https://zakird.com/) and funded by the Stanford Graduate Fellowship. My primary research interest is understanding the web at a global scale. I combine large-scale measurement and systems building to study how the web works in practice and who it actually serves. I aim to replace informal intuitions about the web with rigorous evidence that can inform both system design and policy. Before joining Stanford, I was at **LUMS** (BS ‘23).
 
 At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanqazi.com/), [Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/) and [Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713) on efficient means to debloat websites & software.
 
