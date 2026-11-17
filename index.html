@@ -44,11 +44,17 @@
          .bib-dropdown {
   display: block;
   position: relative;
-  cursor: pointer;
+  padding: 0;
   text-align: center;
 }
 
 .bib-dropdown summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: var(--bulma-card-footer-padding);
   list-style: none;
   cursor: pointer;
 }
@@ -64,7 +70,7 @@
   transform: translateX(-50%);
 
   width: 36rem;
-  max-width: 90vw;
+  max-width: calc(100vw - 2rem);
 
   z-index: 10;
   margin-bottom: 0.5rem;
@@ -369,8 +375,26 @@
             </ul>
         </div>
     </section>
-    
-    
-    
+      <script>
+         document.querySelectorAll(".bib-dropdown").forEach(function (details) {
+            var popup = details.querySelector(".bibtex");
+            function place() {
+               popup.style.translate = "";
+               var gutter = 16;
+               var rect = popup.getBoundingClientRect();
+               var width = document.documentElement.clientWidth;
+               var shift = Math.max(gutter - rect.left, Math.min(0, width - gutter - rect.right));
+               popup.style.translate = shift + "px 0";
+            }
+            details.querySelector("summary").addEventListener("click", function (event) {
+               event.preventDefault();
+               details.open = !details.open;
+               if (details.open) place();
+            });
+            addEventListener("resize", function () {
+               if (details.open) place();
+            });
+         });
+      </script>
    </body>
 </html>
