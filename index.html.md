@@ -10,7 +10,7 @@ I am a fourth-year CS PhD candidate in the [Empirical Security Research Group](h
 
 At LUMS, I worked under the supervision of [Ihsan Ayyub Qazi](https://www.ihsanqazi.com/), [Zafar Ayyub Qazi](https://web.lums.edu.pk/~zafar/) and [Zartash Afzal Uzmi](https://lums.edu.pk/lums_employee/713) on efficient means to debloat websites & software.
 
-You can see my full list of publications [here](https://rumaisahabib.com/publications/).
+You can see my full list of publications [here](https://rumaisahabib.com/publications).
 
 ## Select Publications/خصوصی اشاعتیں
 

@@ -3,140 +3,32 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="CS PhD student at Stanford University">
+      <meta name="color-scheme" content="light dark">
       <title>Publications</title>
+      <link rel="canonical" href="https://rumaisahabib.com/publications">
       <script>
          (function () {
-            var root = document.documentElement;
-            function apply(theme) {
-               root.setAttribute("data-theme", theme);
-               root.style.colorScheme = theme;
+            try {
+               var theme = localStorage.getItem("theme");
+               if (theme === "light" || theme === "dark") document.documentElement.style.colorScheme = theme;
+            } catch (e) {}
+            var key = "redirected:/publications";
+            var last = 0;
+            try { last = Number(sessionStorage.getItem(key)) || 0; } catch (e) {}
+            if (Date.now() - last < 2000) {
+               document.addEventListener("DOMContentLoaded", function () {
+                  document.getElementById("moved").hidden = false;
+               });
+               return;
             }
-            var saved = null;
-            try { saved = localStorage.getItem("theme"); } catch (e) {}
-            if (saved !== "light" && saved !== "dark") {
-               saved = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-            }
-            apply(saved);
-            document.addEventListener("click", function (event) {
-               if (!event.target.closest(".theme-toggle")) return;
-               var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-               apply(next);
-               try { localStorage.setItem("theme", next); } catch (e) {}
-            });
+            try { sessionStorage.setItem(key, String(Date.now())); } catch (e) {}
+            location.replace("/publications" + location.search + location.hash);
          })();
       </script>
-      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="stylesheet" href="/main.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&amp;display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&amp;icon_names=autorenew,co_present,code,description,folder_shared,ondemand_video,refresh,wb_sunny&amp;display=block">
-      <script type="speculationrules">{"prefetch":[{"where":{"href_matches":["/","/publications/"]},"eagerness":"moderate"}]}</script>
-      <style>
-         .icon-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
-         ul li {
-            margin-bottom: 1rem; 
-            white-space: pre-line;
-         }
-      </style>
+      <noscript><meta http-equiv="refresh" content="0; url=/publications"></noscript>
    </head>
    <body>
-    <nav class="navbar is-centered">
-        <div class="container">
-           <div class="navbar-brand">
-              <a href="/" class="navbar-item">Home</a>
-              <a href="/publications/" class="navbar-item">Publications</a>
-              <button type="button" class="theme-toggle" aria-label="Toggle dark mode">
-              <span class="material-icons navbar-item theme-icon">wb_sunny</span>
-              </button>
-           </div>
-        </div>
-     </nav>
-
-     
-
-     <section class="section">
-      <div class="container">
-         <div class="small-note content is-small" style="margin-bottom: 2px;">* Joint first authors</div>
-         <div class="small-note content is-small">† Mentee</div>
-      </div>
-
-      </section>
-     <section class="section">
-      <div class="container">
-         <span class="title has-text-link is-4">Pre-prints/اشاعت سے پہلے</span>
-         <ul class="space content">
-            <li><a href="https://arxiv.org/pdf/2606.18427" target="_blank" class="has-text-link line-link">Understanding the "Airport" Censorship Circumvention Ecosystem in China</a>
-               <span class="is-underlined">Rumaisa Habib</span>*, Mingshi Wu*, Shiva Shahandeh, Min Ni, Eric Wustrow, Zakir Durumeric
-            </li>
-         </ul>
-      </div>
-      </section>
-      <section class="section">
-         <div class="container">
-            <span class="title has-text-link is-4">Conference Publications/کانفرنس اشاعتیں</span>
-            <ul class="space content">
-               <li><a href="/publications/fetch.pdf" target="_blank" class="has-text-link line-link">"Stop Trying to Make Fetch Happen": Towards a Modality-Aware Understanding of Unnecessary Resources on the Web</a>
-               <span class="is-underlined">Rumaisa Habib</span>, Balaji Balachandran†, Nurullah Demir, Zakir Durumeric
-               <span class="is-italic">ACM Internet Measurement Conference</span> (IMC), 2026 <span class="small-note content is-small is-italic"></span>
-               </li>
-               <li><a href="/publications/ip_sharing.pdf" target="_blank" class="has-text-link line-link">On IP Addresses as Identifiers of Internet Users and Services</a>
-               <span class="is-underlined">Rumaisa Habib</span>, Sudheesh Singanamalla, Marwan Fayed, Zakir Durumeric
-               <span class="is-italic">Research Conference on Communications, Information and Internet Policy</span> (TPRC), 2026
-               </li>
-               <li><a href="/publications/vaultor.pdf" target="_blank" class="has-text-link line-link">Don't get caught, put your Onions in a Vault</a>
-               Humza Ikram*, <span class="is-underlined">Rumaisa Habib</span>*, Muaz Ali*, Zartash Afzal Uzmi 
-               <span class="is-italic">New Ideas in Networked Systems</span> (NINeS), 2026
-               </li>
-               <li><a href="/publications/centralization.pdf" target="_blank" class="has-text-link line-link">Formalizing Dependence of Web Infrastructure</a> <a href="https://www.youtube.com/watch?v=IKHMVgsGVJA" target="_blank" class="has-text-link material-icons">co_present</a>
-               <span class="is-underlined">Rumaisa Habib</span>, Kimberly Ruth, Gautam Akiwate, Zakir Durumeric
-               <span class="is-italic">ACM Special Interest Group on Data Communication</span> (SIGCOMM), 2025
-               <span class="has-text-weight-semibold">🏆 IRTF Applied Networking Research Prize 2026</span>
-               </li>
-               <li><a href="/publications/blade.pdf" target="_blank" class="has-text-link line-link">BLADE: Towards Scalable Source Code Debloating</a>
-               Muaz Ali, <span class="is-underlined">Rumaisa Habib</span>, Ashish Gehani, Sazzadur Rahaman, Zartash Afzal Uzmi
-               <span class="is-italic">ACM Secure Development Conference</span> (SecDev), 2023
-               </li>
-               <li><a href="/publications/framework-for-improving-affordability.pdf" target="_blank" class="has-text-link line-link">A Framework for Improving Web Affordability and Inclusiveness</a> <a href="https://github.com/nsgLUMS/sigcomm2023-aw4a" target="_blank" class="has-text-link material-icons">code</a> <a href="https://www.youtube.com/watch?v=AO6GANQFdiU&amp;ab_channel=ACMSIGCOMM" target="_blank" class="has-text-link material-icons">ondemand_video</a> <a href="https://youtu.be/RD73IgzQMFo?feature=shared&amp;t=1211" target="_blank" class="has-text-link material-icons">co_present</a>
-               <span class="is-underlined">Rumaisa Habib</span>*, Sarah Tanveer*, Aimen Inam, Haseeb Ahmed, Ayesha Ali, Zartash Afzal Uzmi, Zafar Ayyub Qazi, Ihsan Ayyub Qazi 
-               <span class="is-italic">ACM Special Interest Group on Data Communication</span> (SIGCOMM), 2023
-               </li>
-               <li><a href="/publications/public-sites.pdf" target="_blank" class="has-text-link line-link">A First Look at Public Service Websites from the Affordability Lens</a> <a href="https://github.com/nsgLUMS/public-service-sites" target="_blank" class="has-text-link material-icons">code</a> <a href="https://youtu.be/Ni3GvG51mHo" target="_blank" class="has-text-link material-icons">ondemand_video</a>
-                  <span class="is-underlined">Rumaisa Habib</span>, Aimen Inam, Ayesha Ali, Ihsan Ayyub Qazi, Zafar Ayyub Qazi
-                  <span class="is-italic">The Web Conference</span> (TheWebConf, formerly WWW), 2023
-               </li>
-               <li><a href="/publications/rethinking-web-affordability-inclusion.pdf" target="_blank" class="has-text-link line-link">Rethinking Web for Affordability and Inclusion</a> <a href="https://www.youtube.com/watch?v=5Vw9jF2tgVE&amp;ab_channel=Hotnets2021" target="_blank" class="has-text-link material-icons">ondemand_video</a>
-                  Ihsan Ayyub Qazi, Zafar Ayyub Qazi, Ayesha Ali, Muhammad Abdullah, <span class="is-underlined">Rumaisa Habib</span>
-                  <span class="is-italic">ACM Workshop on Hot Topics in Networks (HotNets)</span> 2021
-               </li>
-            </ul>
-         </div>
-      </section>
-
-
-      <section class="section">
-      <div class="container">
-         <span class="title has-text-link is-4">Reports & Blog Posts/رپورٹس اور بلاگ پوسٹس</span>
-         <ul class="space content">
-            <li><a href="https://almanac.httparchive.org/en/2025/privacy" target="_blank" class="has-text-link line-link">Privacy</a>
-               <span class="is-underlined">Rumaisa Habib</span>, Vinod Tiwari, Nurullah Demir
-               Analyzed and edited by Max Ostapenko
-               <span class="is-italic">The Web Almanac ‘26</span>
-            </li>
-            <li><a href="https://pulse.internetsociety.org/blog/characterizing-internet-centralization-vs-rationalization" target="_blank" class="has-text-link line-link">Characterizing Internet Centralization vs Regionalization</a>
-               <span class="is-underlined">Rumaisa Habib</span>
-               <span class="is-italic">Internet Society Pulse</span>
-            </li>
-         </ul>
-      </div>
-      </section>
-
-      
-
+      <p id="moved" hidden>This page has moved to <a href="/publications">rumaisahabib.com/publications</a>.</p>
+      <noscript><p>This page has moved to <a href="/publications">rumaisahabib.com/publications</a>.</p></noscript>
    </body>
 </html>

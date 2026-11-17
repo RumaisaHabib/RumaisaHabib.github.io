@@ -54,14 +54,14 @@ export default {
 
 // Page URL -> path of its markdown copy, or null for non-page assets.
 //   /              -> /index.html.md
-//   /publications  -> /publications/index.html.md
-//   /publications/ -> /publications/index.html.md
+//   /publications  -> /publications.md
+//   /foo/          -> /foo/index.html.md
 //   /foo.html      -> /foo.html.md
 function markdownPathFor(pathname) {
   if (pathname.endsWith("/")) return pathname + "index.html.md";
   const lastSegment = pathname.slice(pathname.lastIndexOf("/") + 1);
   if (lastSegment.endsWith(".html")) return pathname + ".md";
-  if (!lastSegment.includes(".")) return pathname + "/index.html.md";
+  if (!lastSegment.includes(".")) return pathname + ".md";
   return null;
 }
 

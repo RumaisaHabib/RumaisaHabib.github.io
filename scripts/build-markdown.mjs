@@ -2,7 +2,7 @@
 // that request Accept: text/markdown (see cloudflare/markdown-worker.js).
 //
 //   /                -> index.html.md
-//   /publications/   -> publications/index.html.md
+//   /publications    -> publications.md
 //
 // The file names follow the llms.txt convention (page URL + ".md", with
 // "index.html.md" for directory URLs), so they also work as direct links.
@@ -12,7 +12,7 @@
 //
 // Run after editing any page:  npm run build-markdown
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import domino from "@mixmark-io/domino";
@@ -39,11 +39,15 @@ function pagesFromSitemap() {
 }
 
 function localPaths(pageUrl) {
-  let p = new URL(pageUrl).pathname;
-  if (p.endsWith("/")) p += "index.html";
-  else if (!path.extname(p)) p += "/index.html";
-  const html = path.join(ROOT, p);
-  return { html, md: html + ".md" };
+  const p = new URL(pageUrl).pathname;
+  if (p.endsWith("/")) {
+    return { html: path.join(ROOT, p, "index.html"), md: path.join(ROOT, p, "index.html.md") };
+  }
+  if (path.extname(p)) {
+    return { html: path.join(ROOT, p), md: path.join(ROOT, p + ".md") };
+  }
+  const flat = path.join(ROOT, p + ".html");
+  return { html: existsSync(flat) ? flat : path.join(ROOT, p, "index.html"), md: path.join(ROOT, p + ".md") };
 }
 
 function replaceTag(el, tagName) {
